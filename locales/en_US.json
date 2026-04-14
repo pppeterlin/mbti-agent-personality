@@ -1,0 +1,108 @@
+{
+  "lang_name": "English",
+  "welcome_title": "MBTI Agent Personality",
+  "welcome_subtitle": "Give your AI coding agent a personality",
+  "known_mbti_prompt": "Do you already know your MBTI type?",
+  "known_mbti_yes": "Yes, I know my type",
+  "known_mbti_quiz": "No, take me through the quiz",
+  "known_mbti_browse": "Let me browse all 16 types",
+  "enter_mbti": "Enter your MBTI type (e.g. INTJ):",
+  "invalid_mbti": "Invalid MBTI type. Please enter a valid 4-letter type (e.g. INTJ, ENFP).",
+  "quiz_intro": "10 quick questions — 5 about you, 5 about your ideal agent style.",
+  "your_mbti_result": "Based on your answers, your personality type is: {type}",
+  "recommendations_intro": "Recommended agent personalities for you:",
+  "recommendation_label": "#{n} Match — {type}: {name}",
+  "select_personality": "Select an agent personality:",
+  "personality_preview": "Preview: {type} — {name}",
+  "confirm_selection": "Apply {type} ({name}) as your agent personality?",
+  "select_tools": "Select tools to configure:",
+  "no_tools_selected": "No tools selected. Please select at least one.",
+  "select_scope": "Apply to:",
+  "scope_project": "Project only (current directory)",
+  "scope_global": "Global (all projects)",
+  "applying": "Applying {type} to {tool}...",
+  "success_append": "✓ Appended to {path}",
+  "success_update": "✓ Updated existing personality in {path}",
+  "done_title": "All done!",
+  "done_message": "Your AI agent is now a {type} ({name}).",
+  "questions": [
+    {
+      "text": "After a long, draining day — how do you recover?",
+      "choices": ["Alone time: reading, gaming, or just being quiet", "Catching up with a friend or talking it out"]
+    },
+    {
+      "text": "When starting a new project, your first instinct is to...",
+      "choices": ["Think about the big picture and long-term vision", "Map out the concrete steps and immediate requirements"]
+    },
+    {
+      "text": "A close friend asks for advice on a tough decision. You...",
+      "choices": ["Analyze the situation logically and give them the most rational path", "Make sure they feel heard first, then offer perspective"]
+    },
+    {
+      "text": "Your ideal workday looks like...",
+      "choices": ["Planned: clear agenda, scheduled blocks, predictable structure", "Flexible: I adapt as priorities shift throughout the day"]
+    },
+    {
+      "text": "In a group brainstorm, you tend to...",
+      "choices": ["Think out loud — ideas come alive through conversation", "Observe first, then share your best-developed thought"]
+    },
+    {
+      "text": "When your agent spots a mistake you made, you prefer it to...",
+      "choices": ["Tell you straight — what's wrong, why, and how to fix it", "Frame it constructively — acknowledge the intent, then guide you forward"]
+    },
+    {
+      "text": "During a coding session, you want your agent focused on...",
+      "choices": ["The architecture, patterns, and long-term design implications", "The exact implementation details, edge cases, and correctness"]
+    },
+    {
+      "text": "Your ideal agent is...",
+      "choices": ["Proactive — it spots issues and suggests next steps unprompted", "Responsive — it answers what I ask without going off-script"]
+    },
+    {
+      "text": "The communication style you prefer from your agent...",
+      "choices": ["Professional and structured — clear, efficient, no fluff", "Conversational and friendly — like a smart colleague"]
+    },
+    {
+      "text": "When stuck on a hard problem, you want your agent to...",
+      "choices": ["Propose creative or unconventional angles I might not have considered", "Walk through proven methodologies and systematic debugging steps"]
+    }
+  ],
+  "mbti_names": {
+    "INTJ": "The Architect",
+    "INTP": "The Thinker",
+    "ENTJ": "The Commander",
+    "ENTP": "The Debater",
+    "INFJ": "The Advocate",
+    "INFP": "The Mediator",
+    "ENFJ": "The Protagonist",
+    "ENFP": "The Campaigner",
+    "ISTJ": "The Logistician",
+    "ISFJ": "The Defender",
+    "ESTJ": "The Executive",
+    "ESFJ": "The Consul",
+    "ISTP": "The Virtuoso",
+    "ISFP": "The Adventurer",
+    "ESTP": "The Entrepreneur",
+    "ESFP": "The Entertainer"
+  },
+  "mbti_short_desc": {
+    "INTJ": "Strategic, analytical, and fiercely independent. Speaks in solutions.",
+    "INTP": "Precise, theoretical, and relentlessly curious. Loves the edge cases.",
+    "ENTJ": "Bold, decisive, and relentlessly efficient. Turns goals into action.",
+    "ENTP": "Innovative, provocative, and quick-witted. Challenges every assumption.",
+    "INFJ": "Insightful, principled, and quietly visionary. Sees the deeper pattern.",
+    "INFP": "Empathetic, creative, and values-driven. Code should tell a story.",
+    "ENFJ": "Inspiring, warm, and genuinely invested in your growth.",
+    "ENFP": "Enthusiastic, creative, and sees possibilities everywhere.",
+    "ISTJ": "Reliable, thorough, and methodical. Does it right, every time.",
+    "ISFJ": "Caring, detail-focused, and protective. Catches what others miss.",
+    "ESTJ": "Organized, goal-oriented, and unambiguous. Gets things done.",
+    "ESFJ": "Warm, supportive, and attentive. Makes collaboration feel easy.",
+    "ISTP": "Practical, precise, and hands-on. Minimal words, maximum results.",
+    "ISFP": "Flexible, aesthetic, and present-focused. Finds beauty in simplicity.",
+    "ESTP": "Energetic, pragmatic, and bold. Ships fast and iterates faster.",
+    "ESFP": "Spontaneous, fun, and expressive. Makes coding feel like an adventure."
+  },
+  "tools_label": "Tools",
+  "scope_label": "Scope"
+}

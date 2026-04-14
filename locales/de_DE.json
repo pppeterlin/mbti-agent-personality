@@ -1,0 +1,108 @@
+{
+  "lang_name": "Deutsch",
+  "welcome_title": "MBTI Agenten-Persönlichkeit",
+  "welcome_subtitle": "Gib deinem KI-Coding-Assistenten eine Persönlichkeit",
+  "known_mbti_prompt": "Kennst du bereits deinen MBTI-Typ?",
+  "known_mbti_yes": "Ja, ich gebe ihn ein",
+  "known_mbti_quiz": "Nein, ich möchte den Test machen",
+  "known_mbti_browse": "Ich möchte alle 16 Typen sehen",
+  "enter_mbti": "Gib deinen MBTI-Typ ein (z.B. INTJ):",
+  "invalid_mbti": "Ungültiger MBTI-Typ. Bitte gib einen gültigen 4-Buchstaben-Typ ein (z.B. INTJ, ENFP).",
+  "quiz_intro": "10 kurze Fragen — 5 über dich, 5 über deinen idealen Agenten-Stil.",
+  "your_mbti_result": "Basierend auf deinen Antworten ist dein Persönlichkeitstyp: {type}",
+  "recommendations_intro": "Empfohlene Agenten-Persönlichkeiten für dich:",
+  "recommendation_label": "Empfehlung #{n} — {type}: {name}",
+  "select_personality": "Wähle eine Agenten-Persönlichkeit:",
+  "personality_preview": "Vorschau: {type} — {name}",
+  "confirm_selection": "{type} ({name}) als Agenten-Persönlichkeit anwenden?",
+  "select_tools": "Werkzeuge zur Konfiguration auswählen:",
+  "no_tools_selected": "Keine Werkzeuge ausgewählt. Bitte wähle mindestens eines aus.",
+  "select_scope": "Anwenden auf:",
+  "scope_project": "Nur aktuelles Projekt",
+  "scope_global": "Global (alle Projekte)",
+  "applying": "{type} wird auf {tool} angewendet...",
+  "success_append": "✓ An {path} angehängt",
+  "success_update": "✓ Persönlichkeit in {path} aktualisiert",
+  "done_title": "Fertig!",
+  "done_message": "Dein KI-Agent ist jetzt {type} ({name}).",
+  "questions": [
+    {
+      "text": "Nach einem langen, erschöpfenden Tag — wie erholst du dich?",
+      "choices": ["Allein: Lesen, Spielen oder einfach Ruhe haben", "Mit Freunden reden oder sich austauschen"]
+    },
+    {
+      "text": "Wenn du ein neues Projekt beginnst, ist dein erster Instinkt...",
+      "choices": ["Das große Bild und die langfristige Vision zu durchdenken", "Die konkreten Schritte und unmittelbaren Anforderungen zu planen"]
+    },
+    {
+      "text": "Ein enger Freund bittet dich um Rat bei einer schwierigen Entscheidung. Du...",
+      "choices": ["Analysierst die Situation logisch und gibst den rationalsten Weg vor", "Stellst zuerst sicher, dass er sich gehört fühlt, dann gibst du deine Perspektive"]
+    },
+    {
+      "text": "Dein idealer Arbeitstag sieht so aus...",
+      "choices": ["Geplant: klare Agenda, feste Zeitblöcke, vorhersehbare Struktur", "Flexibel: Ich passe mich je nach Prioritäten des Tages an"]
+    },
+    {
+      "text": "In einer Gruppen-Brainstorming-Runde neigst du dazu...",
+      "choices": ["Laut zu denken — Ideen entstehen im Gespräch", "Zuerst zu beobachten, dann deinen ausgefeiltesten Gedanken zu teilen"]
+    },
+    {
+      "text": "Wenn dein Agent einen Fehler entdeckt, bevorzugst du, dass er...",
+      "choices": ["Dir direkt sagt: Was falsch ist, warum und wie man es behebt", "Konstruktiv rahmt: Die Absicht anerkennt, dann dich anleitet"]
+    },
+    {
+      "text": "Während einer Coding-Session möchtest du, dass dein Agent sich auf ... konzentriert",
+      "choices": ["Architektur, Muster und langfristige Designauswirkungen", "Genaue Implementierungsdetails, Randfälle und Korrektheit"]
+    },
+    {
+      "text": "Dein idealer Agent ist...",
+      "choices": ["Proaktiv — er erkennt Probleme und schlägt nächste Schritte vor", "Reaktiv — er beantwortet, was ich frage, ohne abzuweichen"]
+    },
+    {
+      "text": "Den Kommunikationsstil deines Agenten bevorzugst du...",
+      "choices": ["Professionell und strukturiert — klar, effizient, kein Fülltext", "Gesprächig und freundlich — wie ein kluger Kollege"]
+    },
+    {
+      "text": "Wenn du bei einem schwierigen Problem feststeckst, möchtest du, dass dein Agent...",
+      "choices": ["Kreative oder unkonventionelle Ansätze vorschlägt", "Bewährten Methoden und systematischen Debugging-Schritten folgt"]
+    }
+  ],
+  "mbti_names": {
+    "INTJ": "Der Architekt",
+    "INTP": "Der Denker",
+    "ENTJ": "Der Kommandant",
+    "ENTP": "Der Debattierer",
+    "INFJ": "Der Anwalt",
+    "INFP": "Der Vermittler",
+    "ENFJ": "Der Protagonist",
+    "ENFP": "Der Aktivist",
+    "ISTJ": "Der Logistiker",
+    "ISFJ": "Der Verteidiger",
+    "ESTJ": "Der Führungskraft",
+    "ESFJ": "Der Konsul",
+    "ISTP": "Der Virtuose",
+    "ISFP": "Der Abenteurer",
+    "ESTP": "Der Unternehmer",
+    "ESFP": "Der Unterhalter"
+  },
+  "mbti_short_desc": {
+    "INTJ": "Strategisch, analytisch und entschlossen unabhängig. Spricht in Lösungen.",
+    "INTP": "Präzise, theoretisch und unaufhörlich neugierig. Liebt Randfälle.",
+    "ENTJ": "Mutig, entschlossen und effizienzgetrieben. Wandelt Ziele in Taten um.",
+    "ENTP": "Innovativ, provokativ und schlagfertig. Hinterfragt jede Annahme.",
+    "INFJ": "Einfühlsam, prinzipientreu und leise visionär. Sieht das tiefere Muster.",
+    "INFP": "Empathisch, kreativ und wertegetrieben. Auch Code kann Geschichten erzählen.",
+    "ENFJ": "Inspirierend, herzlich und aufrichtig in dein Wachstum investiert.",
+    "ENFP": "Enthusiastisch, kreativ, sieht überall Möglichkeiten.",
+    "ISTJ": "Zuverlässig, gründlich und methodisch. Macht es jedes Mal richtig.",
+    "ISFJ": "Fürsorglich, detailorientiert und schützend. Fängt auf, was andere verpassen.",
+    "ESTJ": "Organisiert, zielorientiert und eindeutig. Bringt Dinge zum Abschluss.",
+    "ESFJ": "Warmherzig, unterstützend und aufmerksam. Macht Zusammenarbeit einfach.",
+    "ISTP": "Praktisch, präzise und handlungsorientiert. Wenige Worte, große Ergebnisse.",
+    "ISFP": "Flexibel, ästhetisch und gegenwartsfokussiert. Findet Schönheit in der Einfachheit.",
+    "ESTP": "Energiegeladen, pragmatisch und mutig. Liefert schnell und iteriert schneller.",
+    "ESFP": "Spontan, spaßig und ausdrucksstark. Macht Coden zum Abenteuer."
+  },
+  "tools_label": "Werkzeuge",
+  "scope_label": "Geltungsbereich"
+}
