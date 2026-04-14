@@ -8,7 +8,7 @@
   "known_mbti_browse": "16タイプを全部見たい",
   "enter_mbti": "MBTIタイプを入力（例：INTJ）：",
   "invalid_mbti": "無効なMBTIタイプです。正しい4文字のタイプを入力してください（例：INTJ、ENFP）。",
-  "quiz_intro": "10の質問 — 前半5問はあなた自身について、後半5問は希望するエージェントスタイルについて。",
+  "quiz_intro": "いくつかの質問で、あなたに最適なエージェント人格を見つけます。",
   "your_mbti_result": "回答結果から、あなたのタイプは：{type}",
   "recommendations_intro": "あなたにおすすめのエージェント人格：",
   "recommendation_label": "第{n}候補 — {type}：{name}",

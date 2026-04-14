@@ -8,7 +8,7 @@
   "known_mbti_browse": "Let me browse all 16 types",
   "enter_mbti": "Enter your MBTI type (e.g. INTJ):",
   "invalid_mbti": "Invalid MBTI type. Please enter a valid 4-letter type (e.g. INTJ, ENFP).",
-  "quiz_intro": "10 quick questions — 5 about you, 5 about your ideal agent style.",
+  "quiz_intro": "A quick quiz to find your perfect agent personality.",
   "your_mbti_result": "Based on your answers, your personality type is: {type}",
   "recommendations_intro": "Recommended agent personalities for you:",
   "recommendation_label": "#{n} Match — {type}: {name}",

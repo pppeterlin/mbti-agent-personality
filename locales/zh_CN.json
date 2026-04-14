@@ -8,7 +8,7 @@
   "known_mbti_browse": "我想浏览所有 16 种类型",
   "enter_mbti": "输入你的 MBTI 类型（例如：INTJ）：",
   "invalid_mbti": "无效的 MBTI 类型，请输入正确的四字母类型（例如：INTJ、ENFP）。",
-  "quiz_intro": "10 个快速问题 — 前 5 题了解你，后 5 题了解你喜欢的 Agent 风格。",
+  "quiz_intro": "几个快速问题，找出最适合你的 agent 人格。",
   "your_mbti_result": "根据你的回答，你的人格类型是：{type}",
   "recommendations_intro": "为你推荐的 Agent 人格：",
   "recommendation_label": "第 #{n} 推荐 — {type}：{name}",
