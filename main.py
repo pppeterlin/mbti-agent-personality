@@ -138,7 +138,8 @@ def run_full_quiz(locale: dict) -> tuple[str, dict]:
 # ── Personality selection ────────────────────────────────────────────────────
 
 def select_agent_personality(locale: dict, recommendations: list[str]) -> str:
-    """Let user select from recommended types (or browse all). Handles back navigation."""
+    """Let user select from recommended types (or browse all).
+    Returns a valid MBTI string, or '__back__' if user wants to re-enter their type."""
     while True:
         console.print(f"\n[bold cyan]{locale['recommendations_intro']}[/bold cyan]")
 
@@ -150,8 +151,9 @@ def select_agent_personality(locale: dict, recommendations: list[str]) -> str:
             label = f"{mbti} — {name}  |  {desc}"
             choices.append(questionary.Choice(title=label, value=mbti))
 
-        # Add "browse all" option
+        # Navigation options
         choices.append(questionary.Choice(title="[ Browse all 16 types ]", value='__browse__'))
+        choices.append(questionary.Choice(title="← 重新輸入 MBTI", value='__back__'))
 
         selected = questionary.select(
             locale['select_personality'],
@@ -161,10 +163,13 @@ def select_agent_personality(locale: dict, recommendations: list[str]) -> str:
         if selected is None:
             sys.exit(0)
 
+        if selected == '__back__':
+            return '__back__'
+
         if selected == '__browse__':
             result = browse_all_types(locale)
             if result == '__back__':
-                # User pressed Back from browse — loop back to recommendations
+                # Back from browse → return to recommendations
                 continue
             return result
 
@@ -278,8 +283,19 @@ def main():
     while True:
         # 3a. Pick a personality
         if recommendations:
-            # select_agent_personality handles browse→Back→recommendations internally
             selected_mbti = select_agent_personality(locale, recommendations)
+            if selected_mbti == '__back__':
+                # User wants to re-enter MBTI → go back to initial menu
+                user_choice = get_user_mbti(locale)
+                if user_choice is None:
+                    user_mbti, preference_scores = run_full_quiz(locale)
+                    console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
+                    recommendations = get_recommendations(user_mbti, preference_scores)
+                elif user_choice == 'BROWSE':
+                    recommendations = []
+                else:
+                    recommendations = get_recommendations(user_choice, preference_scores)
+                continue
         else:
             # Pure browse mode
             selected_mbti = browse_all_types(locale)
