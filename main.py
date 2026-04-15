@@ -2,6 +2,8 @@
 """
 MBTI Agent Personality — Give your AI coding agent a personality.
 """
+from __future__ import annotations
+
 import json
 import os
 import sys
@@ -136,36 +138,42 @@ def run_full_quiz(locale: dict) -> tuple[str, dict]:
 # ── Personality selection ────────────────────────────────────────────────────
 
 def select_agent_personality(locale: dict, recommendations: list[str]) -> str:
-    """Let user select from recommended types (or browse all)."""
-    console.print(f"\n[bold cyan]{locale['recommendations_intro']}[/bold cyan]")
+    """Let user select from recommended types (or browse all). Handles back navigation."""
+    while True:
+        console.print(f"\n[bold cyan]{locale['recommendations_intro']}[/bold cyan]")
 
-    # Show short preview of each recommendation
-    choices = []
-    for i, mbti in enumerate(recommendations, 1):
-        name = locale['mbti_names'].get(mbti, mbti)
-        desc = locale['mbti_short_desc'].get(mbti, '')
-        label = f"{mbti} — {name}  |  {desc}"
-        choices.append(questionary.Choice(title=label, value=mbti))
+        # Show short preview of each recommendation
+        choices = []
+        for i, mbti in enumerate(recommendations, 1):
+            name = locale['mbti_names'].get(mbti, mbti)
+            desc = locale['mbti_short_desc'].get(mbti, '')
+            label = f"{mbti} — {name}  |  {desc}"
+            choices.append(questionary.Choice(title=label, value=mbti))
 
-    # Add "browse all" option
-    choices.append(questionary.Choice(title="[ Browse all 16 types ]", value='__browse__'))
+        # Add "browse all" option
+        choices.append(questionary.Choice(title="[ Browse all 16 types ]", value='__browse__'))
 
-    selected = questionary.select(
-        locale['select_personality'],
-        choices=choices,
-    ).ask()
+        selected = questionary.select(
+            locale['select_personality'],
+            choices=choices,
+        ).ask()
 
-    if selected is None:
-        sys.exit(0)
+        if selected is None:
+            sys.exit(0)
 
-    if selected == '__browse__':
-        return browse_all_types(locale)
+        if selected == '__browse__':
+            result = browse_all_types(locale)
+            if result == '__back__':
+                # User pressed Back from browse — loop back to recommendations
+                continue
+            return result
 
-    return selected
+        return selected
 
 
 def browse_all_types(locale: dict) -> str:
-    choices = []
+    """Browse all 16 types. Returns '__back__' if user wants to go back."""
+    choices = [questionary.Choice(title="← Back", value='__back__')]
     for mbti in ALL_TYPES:
         name = locale['mbti_names'].get(mbti, mbti)
         desc = locale['mbti_short_desc'].get(mbti, '')
@@ -264,8 +272,23 @@ def main():
         selected_mbti = select_agent_personality(locale, recommendations)
 
     elif user_mbti == 'BROWSE':
-        # Browse all types
-        selected_mbti = browse_all_types(locale)
+        # Browse all types — loop until user picks one (not back)
+        while True:
+            selected_mbti = browse_all_types(locale)
+            if selected_mbti != '__back__':
+                break
+            # Back from browse → re-ask user MBTI entry
+            user_mbti = get_user_mbti(locale)
+            if user_mbti is None:
+                user_mbti, preference_scores = run_full_quiz(locale)
+                console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
+                recommendations = get_recommendations(user_mbti, preference_scores)
+                selected_mbti = select_agent_personality(locale, recommendations)
+                break
+            elif user_mbti != 'BROWSE':
+                recommendations = get_recommendations(user_mbti, preference_scores)
+                selected_mbti = select_agent_personality(locale, recommendations)
+                break
 
     else:
         # Known MBTI — show compatible recommendations
