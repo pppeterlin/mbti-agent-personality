@@ -27,44 +27,44 @@
   "done_message": "Your AI agent is now a {type} ({name}).",
   "questions": [
     {
-      "text": "After a long, draining day — how do you recover?",
-      "choices": ["Alone time: reading, gaming, or just being quiet", "Catching up with a friend or talking it out"]
+      "text": "Friday afternoon — Production just had three bugs explode, and you finally fixed them by evening. How do you close out the day?",
+      "choices": ["Close all Slack notifications, headphones on, tinker on a side project or read tech articles alone", "Find a teammate for a quick retro chat, or grab a drink to decompress together"]
     },
     {
-      "text": "When starting a new project, your first instinct is to...",
-      "choices": ["Think about the big picture and long-term vision", "Map out the concrete steps and immediate requirements"]
+      "text": "Your PM drops a new feature request with three lines of context. What's your first move?",
+      "choices": ["Start thinking about system architecture, how it fits the roadmap, and future scalability", "Fire off a list of clarifying questions: edge cases, acceptance criteria, what the DB schema needs"]
     },
     {
-      "text": "A close friend asks for advice on a tough decision. You...",
-      "choices": ["Analyze the situation logically and give them the most rational path", "Make sure they feel heard first, then offer perspective"]
+      "text": "A junior engineer submits a PR that's fundamentally wrong — not style issues, but the architectural approach is off. You...",
+      "choices": ["Leave precise review comments: \"This will cause X problem. The correct approach is Y.\"", "Schedule a 15-min pairing session, understand their thinking first, then work toward a better solution together"]
     },
     {
-      "text": "Your ideal workday looks like...",
-      "choices": ["Planned: clear agenda, scheduled blocks, predictable structure", "Flexible: I adapt as priorities shift throughout the day"]
+      "text": "Sprint Planning is tomorrow. Tonight you...",
+      "choices": ["Pre-read all tickets, estimate complexity, prep notes — walk in prepared", "Just show up — you think better in real-time, over-preparing is wasted effort"]
     },
     {
-      "text": "In a group brainstorm, you tend to...",
-      "choices": ["Think out loud — ideas come alive through conversation", "Observe first, then share your best-developed thought"]
+      "text": "The team is debating Monolith vs. Microservices and it's getting heated. You tend to...",
+      "choices": ["Jump in early, think out loud, and sharpen your view through back-and-forth", "Listen to everyone first, then deliver one well-formed take when you're ready"]
     },
     {
-      "text": "When your agent spots a mistake you made, you prefer it to...",
-      "choices": ["Tell you straight — what's wrong, why, and how to fix it", "Frame it constructively — acknowledge the intent, then guide you forward"]
+      "text": "Your agent spots a bug in your code. How do you want it to respond?",
+      "choices": ["Cut to it: file, line, root cause, fix — no preamble needed", "Explain why it's a bug so I actually understand it, not just patch it"]
     },
     {
-      "text": "During a coding session, you want your agent focused on...",
-      "choices": ["The architecture, patterns, and long-term design implications", "The exact implementation details, edge cases, and correctness"]
+      "text": "You're designing a new service from scratch. Which agent mode is most useful?",
+      "choices": ["\"Here are several architecture options with their trade-offs\" — give me the big picture", "\"Here's working code for exactly what you need\" — give me something that runs"]
     },
     {
-      "text": "Your ideal agent is...",
-      "choices": ["Proactive — it spots issues and suggests next steps unprompted", "Responsive — it answers what I ask without going off-script"]
+      "text": "During a deep coding session, your ideal agent is...",
+      "choices": ["Proactive: it watches along and flags potential risks before you even ask", "On standby: it waits until I ask, then gives a precise answer without breaking my flow"]
     },
     {
-      "text": "The communication style you prefer from your agent...",
-      "choices": ["Professional and structured — clear, efficient, no fluff", "Conversational and friendly — like a smart colleague"]
+      "text": "You prefer your agent's output to look like...",
+      "choices": ["Structured: bullet points, clear headers, code blocks — scannable and copy-paste ready", "Conversational: like a senior dev explaining over Slack — natural and easy to read"]
     },
     {
-      "text": "When stuck on a hard problem, you want your agent to...",
-      "choices": ["Propose creative or unconventional angles I might not have considered", "Walk through proven methodologies and systematic debugging steps"]
+      "text": "You've been stuck on a weird, intermittent Production bug for 3 hours. You want your agent to...",
+      "choices": ["Throw unconventional hypotheses — race conditions, memory leaks, angles you haven't considered", "Walk through it systematically: logs, stack trace, known failure modes, step by step"]
     }
   ],
   "mbti_names": {

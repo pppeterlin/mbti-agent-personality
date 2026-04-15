@@ -2,6 +2,8 @@
 """
 MBTI Agent Personality — Give your AI coding agent a personality.
 """
+from __future__ import annotations
+
 import json
 import os
 import sys
@@ -136,36 +138,47 @@ def run_full_quiz(locale: dict) -> tuple[str, dict]:
 # ── Personality selection ────────────────────────────────────────────────────
 
 def select_agent_personality(locale: dict, recommendations: list[str]) -> str:
-    """Let user select from recommended types (or browse all)."""
-    console.print(f"\n[bold cyan]{locale['recommendations_intro']}[/bold cyan]")
+    """Let user select from recommended types (or browse all).
+    Returns a valid MBTI string, or '__back__' if user wants to re-enter their type."""
+    while True:
+        console.print(f"\n[bold cyan]{locale['recommendations_intro']}[/bold cyan]")
 
-    # Show short preview of each recommendation
-    choices = []
-    for i, mbti in enumerate(recommendations, 1):
-        name = locale['mbti_names'].get(mbti, mbti)
-        desc = locale['mbti_short_desc'].get(mbti, '')
-        label = f"{mbti} — {name}  |  {desc}"
-        choices.append(questionary.Choice(title=label, value=mbti))
+        # Show short preview of each recommendation
+        choices = []
+        for i, mbti in enumerate(recommendations, 1):
+            name = locale['mbti_names'].get(mbti, mbti)
+            desc = locale['mbti_short_desc'].get(mbti, '')
+            label = f"{mbti} — {name}  |  {desc}"
+            choices.append(questionary.Choice(title=label, value=mbti))
 
-    # Add "browse all" option
-    choices.append(questionary.Choice(title="[ Browse all 16 types ]", value='__browse__'))
+        # Navigation options
+        choices.append(questionary.Choice(title="[ Browse all 16 types ]", value='__browse__'))
+        choices.append(questionary.Choice(title="← 重新輸入 MBTI", value='__back__'))
 
-    selected = questionary.select(
-        locale['select_personality'],
-        choices=choices,
-    ).ask()
+        selected = questionary.select(
+            locale['select_personality'],
+            choices=choices,
+        ).ask()
 
-    if selected is None:
-        sys.exit(0)
+        if selected is None:
+            sys.exit(0)
 
-    if selected == '__browse__':
-        return browse_all_types(locale)
+        if selected == '__back__':
+            return '__back__'
 
-    return selected
+        if selected == '__browse__':
+            result = browse_all_types(locale)
+            if result == '__back__':
+                # Back from browse → return to recommendations
+                continue
+            return result
+
+        return selected
 
 
 def browse_all_types(locale: dict) -> str:
-    choices = []
+    """Browse all 16 types. Returns '__back__' if user wants to go back."""
+    choices = [questionary.Choice(title="← Back", value='__back__')]
     for mbti in ALL_TYPES:
         name = locale['mbti_names'].get(mbti, mbti)
         desc = locale['mbti_short_desc'].get(mbti, '')
@@ -252,43 +265,72 @@ def main():
     console.clear()
     print_welcome(locale)
 
-    # 2. Determine user MBTI and get recommendations
-    user_mbti = get_user_mbti(locale)
+    # 2. Initial menu → determine mode
     preference_scores = {}
+    recommendations = []
 
-    if user_mbti is None:
-        # Quiz path
+    user_choice = get_user_mbti(locale)
+    if user_choice is None:
         user_mbti, preference_scores = run_full_quiz(locale)
         console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
         recommendations = get_recommendations(user_mbti, preference_scores)
-        selected_mbti = select_agent_personality(locale, recommendations)
+    elif user_choice != 'BROWSE':
+        recommendations = get_recommendations(user_choice, preference_scores)
+    # 'BROWSE' → recommendations stays [], pure browse mode
 
-    elif user_mbti == 'BROWSE':
-        # Browse all types
-        selected_mbti = browse_all_types(locale)
+    # 3. Personality selection + preview + confirmation loop
+    selected_mbti = None
+    while True:
+        # 3a. Pick a personality
+        if recommendations:
+            selected_mbti = select_agent_personality(locale, recommendations)
+            if selected_mbti == '__back__':
+                # User wants to re-enter MBTI → go back to initial menu
+                user_choice = get_user_mbti(locale)
+                if user_choice is None:
+                    user_mbti, preference_scores = run_full_quiz(locale)
+                    console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
+                    recommendations = get_recommendations(user_mbti, preference_scores)
+                elif user_choice == 'BROWSE':
+                    recommendations = []
+                else:
+                    recommendations = get_recommendations(user_choice, preference_scores)
+                continue
+        else:
+            # Pure browse mode
+            selected_mbti = browse_all_types(locale)
+            if selected_mbti == '__back__':
+                # Back from browse → return to initial menu
+                user_choice = get_user_mbti(locale)
+                if user_choice is None:
+                    user_mbti, preference_scores = run_full_quiz(locale)
+                    console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
+                    recommendations = get_recommendations(user_mbti, preference_scores)
+                elif user_choice != 'BROWSE':
+                    recommendations = get_recommendations(user_choice, preference_scores)
+                # if 'BROWSE' again → stay in browse mode (recommendations stays [])
+                continue
 
-    else:
-        # Known MBTI — show compatible recommendations
-        recommendations = get_recommendations(user_mbti, preference_scores)
-        selected_mbti = select_agent_personality(locale, recommendations)
+        # 3b. Preview selected personality
+        template = ALL_TEMPLATES[selected_mbti]
+        print_personality_card(selected_mbti, locale, template)
 
-    # 3. Preview selected personality
-    template = ALL_TEMPLATES[selected_mbti]
-    print_personality_card(selected_mbti, locale, template)
+        # 3c. Confirm
+        name = locale['mbti_names'].get(selected_mbti, selected_mbti)
+        confirmed = questionary.confirm(
+            locale['confirm_selection'].format(type=selected_mbti, name=name),
+            default=True,
+        ).ask()
 
-    # 4. Confirm
-    name = locale['mbti_names'].get(selected_mbti, selected_mbti)
-    confirmed = questionary.confirm(
-        locale['confirm_selection'].format(type=selected_mbti, name=name),
-        default=True,
-    ).ask()
+        if confirmed is None:
+            sys.exit(0)
 
-    if not confirmed:
-        console.print("[dim]Restarting selection...[/dim]\n")
-        main()
-        return
+        if confirmed:
+            break
+        # No → loop back: recommendations mode shows list again,
+        #                  browse mode shows browse again (with Back → initial menu)
 
-    # 5. Tool + scope selection
+    # 4. Tool + scope selection
     selected_tools, scope = select_tools_and_scope(locale)
 
     # 6. Apply

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from core.matcher import determine_mbti, PREFERENCE_WEIGHTS
 
 

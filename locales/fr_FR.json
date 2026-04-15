@@ -27,44 +27,44 @@
   "done_message": "Votre agent IA est maintenant {type} ({name}).",
   "questions": [
     {
-      "text": "Après une longue journée épuisante, comment récupérez-vous ?",
-      "choices": ["Temps seul : lecture, jeux vidéo ou simplement du calme", "Retrouver des amis ou discuter avec quelqu'un"]
+      "text": "Vendredi après-midi — trois bugs viennent d'exploser en Production, et vous finissez de les corriger en soirée. Comment vous clôturez la journée ?",
+      "choices": ["Fermer toutes les notifs Slack, casque sur les oreilles, bricoler seul un side project ou lire des articles techniques", "Retrouver un collègue pour une mini-rétro, ou aller prendre un verre pour décompresser ensemble"]
     },
     {
-      "text": "En démarrant un nouveau projet, votre premier instinct est de...",
-      "choices": ["Réfléchir à la vision globale et aux objectifs à long terme", "Lister les étapes concrètes et les besoins immédiats"]
+      "text": "Votre PM vous envoie une nouvelle demande de feature avec trois lignes de contexte. Votre premier réflexe ?",
+      "choices": ["Commencer à réfléchir à l'architecture système, comment ça s'inscrit dans le roadmap et la scalabilité future", "Envoyer une liste de questions : edge cases, critères d'acceptation, besoins du schéma BD"]
     },
     {
-      "text": "Un ami vous demande conseil pour une décision difficile. Vous...",
-      "choices": ["Analysez la situation logiquement et donnez le chemin le plus rationnel", "Vous assurez d'abord qu'il se sente entendu, puis vous donnez votre avis"]
+      "text": "Un junior soumet une PR fondamentalement incorrecte — pas de style, mais l'approche architecturale est mauvaise. Vous...",
+      "choices": ["Laissez des commentaires de review précis : « Ça causera le problème X. La bonne approche est Y. »", "Proposez une session de pairing de 15 min, comprenez son raisonnement d'abord, puis cherchez une meilleure solution ensemble"]
     },
     {
-      "text": "Votre journée de travail idéale ressemble à...",
-      "choices": ["Planifiée : agenda clair, blocs horaires, structure prévisible", "Flexible : je m'adapte selon les priorités du jour"]
+      "text": "Le Sprint Planning est demain. Ce soir, vous...",
+      "choices": ["Relisez tous les tickets, estimez la complexité, préparez des notes — vous arrivez prêt", "Vous vous présentez et réfléchissez en temps réel — trop se préparer c'est du temps gaspillé"]
     },
     {
-      "text": "Dans un brainstorming de groupe, vous avez tendance à...",
-      "choices": ["Penser à voix haute — les idées prennent vie dans la conversation", "Observer d'abord, puis partager votre idée la plus aboutie"]
+      "text": "L'équipe débat Monolith vs. Microservices et ça chauffe. Vous tendez à...",
+      "choices": ["Intervenir tôt, réfléchir à voix haute et affiner votre avis dans l'échange", "Écouter tout le monde d'abord, puis donner un avis bien formé quand vous êtes prêt"]
     },
     {
-      "text": "Quand votre agent détecte une erreur, vous préférez qu'il...",
-      "choices": ["Vous le dise directement : ce qui ne va pas, pourquoi et comment corriger", "L'encadre de façon constructive : reconnaît l'intention, puis vous guide"]
+      "text": "Votre agent détecte un bug dans votre code. Comment voulez-vous qu'il réponde ?",
+      "choices": ["Droit au but : fichier, ligne, cause racine, correction — sans préambule", "Qu'il explique pourquoi c'est un bug pour vraiment comprendre, pas juste le patcher"]
     },
     {
-      "text": "Pendant une session de code, vous voulez que votre agent se concentre sur...",
-      "choices": ["L'architecture, les patterns et les implications à long terme", "Les détails précis d'implémentation, les cas limites et l'exactitude"]
+      "text": "Vous concevez un nouveau service de zéro. Quel mode d'agent vous est le plus utile ?",
+      "choices": ["« Voici plusieurs options d'architecture avec leurs compromis » — donnez-moi la vue d'ensemble", "« Voici le code qui fonctionne pour exactement ce dont vous avez besoin » — donnez-moi quelque chose qui tourne"]
     },
     {
-      "text": "Votre agent idéal est...",
-      "choices": ["Proactif — il détecte les problèmes et suggère les prochaines étapes", "Réactif — il répond à ce que je demande sans s'en écarter"]
+      "text": "Pendant une session de code intense, votre agent idéal est...",
+      "choices": ["Proactif : il observe et signale les risques potentiels avant même que vous demandiez", "En veille : silencieux jusqu'à ce que je demande, puis répond avec précision sans briser mon flow"]
     },
     {
-      "text": "Le style de communication que vous préférez de votre agent...",
-      "choices": ["Professionnel et structuré — clair, efficace, sans remplissage", "Conversationnel et amical — comme un collègue intelligent"]
+      "text": "Vous préférez que la sortie de votre agent ressemble à...",
+      "choices": ["Structurée : bullets, titres clairs, blocs de code — facile à parcourir et à copier", "Conversationnelle : comme un senior dev qui explique sur Slack — naturel et facile à lire"]
     },
     {
-      "text": "Bloqué sur un problème difficile, vous voulez que votre agent...",
-      "choices": ["Propose des angles créatifs ou non conventionnels", "Suive des méthodologies éprouvées et des étapes de débogage systématiques"]
+      "text": "Vous êtes bloqué depuis 3 heures sur un bug de Production intermittent et bizarre. Vous voulez que votre agent...",
+      "choices": ["Lance des hypothèses non conventionnelles — race conditions, memory leaks, angles que vous n'avez pas envisagés", "Procède systématiquement : logs, stack trace, modes de défaillance connus, étape par étape"]
     }
   ],
   "mbti_names": {

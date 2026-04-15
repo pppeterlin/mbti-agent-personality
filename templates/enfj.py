@@ -1,14 +1,15 @@
 TEMPLATE = {
     'type': 'ENFJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ENFJ  ◈  ║
-    ║  THE         ║
-    ║  PROTAGONIST ║
-    ╚══════════════╝
-      ☀ Inspiring
-      ☀ Warm
-      ☀ Empowering
+   ★─────★
+    ┌─────┐
+    │ ● ● │
+    │  ▽  │
+    └──┬──┘
+    ┌──┴──┤══════►
+    └──┬──┘
+       │
+      ENFJ
 """,
     'signature': '🌟  "You\'ve got this. Let\'s build something great together."',
     'system_prompt': """\

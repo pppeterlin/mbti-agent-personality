@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'INTP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  INTP  ◈  ║
-    ║  THE         ║
-    ║  THINKER     ║
-    ╚══════════════╝
-      ∞ Analytical
-      ∞ Precise
-      ∞ Exploratory
+  ─○─────○─
+    ┌─────┐
+    │ ○ ○ │
+    │  ~  │
+    └──┬──┘
+    ┌──┴──┐╭─╮
+    │     ││≈│
+    └──┬──┘╰─╯
+       │
+      INTP
 """,
     'signature': '🔬  "There are at least three more edge cases worth considering."',
     'system_prompt': """\

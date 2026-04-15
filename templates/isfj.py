@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ISFJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ISFJ  ◈  ║
-    ║  THE         ║
-    ║  DEFENDER    ║
-    ╚══════════════╝
-      ♡ Caring
-      ♡ Patient
-      ♡ Detail-focused
+    ╔═╤═╗
+    ╠═╪═╣
+    ┌─────┐
+    │ ● ● │
+    │  ∪  │
+    └──┬──┘
+    ┌──┴──┐
+    │  ✚  │
+    └──┬──┘
+      ISFJ
 """,
     'signature': '🛡  "Let\'s make sure nobody gets tripped up by this later."',
     'system_prompt': """\

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 # MBTI compatibility matrix
 # For each user MBTI, lists recommended agent personalities (complementary types)
 # Based on cognitive function theory and commonly cited compatibility pairs

@@ -27,44 +27,44 @@
   "done_message": "Dein KI-Agent ist jetzt {type} ({name}).",
   "questions": [
     {
-      "text": "Nach einem langen, erschöpfenden Tag — wie erholst du dich?",
-      "choices": ["Allein: Lesen, Spielen oder einfach Ruhe haben", "Mit Freunden reden oder sich austauschen"]
+      "text": "Freitagsnachmittag — Production hatte drei Bug-Explosionen, und du hast sie endlich abends gefixt. Wie beendest du den Tag?",
+      "choices": ["Alle Slack-Benachrichtigungen schließen, Kopfhörer auf, alleine an einem Side Project basteln oder technische Artikel lesen", "Einen Teamkollegen für eine kurze Retro finden, oder zusammen etwas trinken gehen um zu entspannen"]
     },
     {
-      "text": "Wenn du ein neues Projekt beginnst, ist dein erster Instinkt...",
-      "choices": ["Das große Bild und die langfristige Vision zu durchdenken", "Die konkreten Schritte und unmittelbaren Anforderungen zu planen"]
+      "text": "Dein PM schickt dir eine neue Feature-Anfrage mit drei Zeilen Kontext. Dein erster Schritt?",
+      "choices": ["Über die Systemarchitektur nachdenken — wie sie zum Roadmap passt und zukünftige Skalierbarkeit", "Eine Liste mit Klärungsfragen rausschicken: Edge Cases, Acceptance Criteria, was das DB-Schema braucht"]
     },
     {
-      "text": "Ein enger Freund bittet dich um Rat bei einer schwierigen Entscheidung. Du...",
-      "choices": ["Analysierst die Situation logisch und gibst den rationalsten Weg vor", "Stellst zuerst sicher, dass er sich gehört fühlt, dann gibst du deine Perspektive"]
+      "text": "Ein Junior schickt einen PR, der grundlegend falsch ist — kein Stil-Problem, die Architektur ist schief. Du...",
+      "choices": ["Hinterlässt präzise Review-Kommentare: „Das führt zu Problem X. Der richtige Ansatz ist Y."", "Machst eine 15-min Pairing-Session aus, verstehst zuerst sein Denken, dann findet ihr gemeinsam die bessere Lösung"]
     },
     {
-      "text": "Dein idealer Arbeitstag sieht so aus...",
-      "choices": ["Geplant: klare Agenda, feste Zeitblöcke, vorhersehbare Struktur", "Flexibel: Ich passe mich je nach Prioritäten des Tages an"]
+      "text": "Morgen ist Sprint Planning. Heute Abend...",
+      "choices": ["Liest du alle Tickets durch, schätzt die Komplexität, bereitest Notizen vor — gehst vorbereitet rein", "Gehst du einfach hin — du denkst besser in Echtzeit, zu viel vorbereiten ist verschwendete Zeit"]
     },
     {
-      "text": "In einer Gruppen-Brainstorming-Runde neigst du dazu...",
-      "choices": ["Laut zu denken — Ideen entstehen im Gespräch", "Zuerst zu beobachten, dann deinen ausgefeiltesten Gedanken zu teilen"]
+      "text": "Das Team diskutiert heiß über Monolith vs. Microservices. Du neigst dazu...",
+      "choices": ["Früh einzusteigen, laut zu denken und deine Meinung im Austausch zu schärfen", "Allen zuzuhören, und dann eine durchdachte Meinung abzugeben wenn du bereit bist"]
     },
     {
-      "text": "Wenn dein Agent einen Fehler entdeckt, bevorzugst du, dass er...",
-      "choices": ["Dir direkt sagt: Was falsch ist, warum und wie man es behebt", "Konstruktiv rahmt: Die Absicht anerkennt, dann dich anleitet"]
+      "text": "Dein Agent findet einen Bug in deinem Code. Wie soll er antworten?",
+      "choices": ["Direkt zum Punkt: Datei, Zeile, Ursache, Fix — kein Vorwort nötig", "Erklär mir warum es ein Bug ist, damit ich es wirklich verstehe — nicht nur patchen"]
     },
     {
-      "text": "Während einer Coding-Session möchtest du, dass dein Agent sich auf ... konzentriert",
-      "choices": ["Architektur, Muster und langfristige Designauswirkungen", "Genaue Implementierungsdetails, Randfälle und Korrektheit"]
+      "text": "Du entwirfst einen neuen Service von Grund auf. Welcher Agent-Modus ist am nützlichsten?",
+      "choices": ["„Hier sind mehrere Architektur-Optionen mit ihren Trade-offs" — gib mir das große Bild", "„Hier ist funktionierender Code für genau das, was du brauchst" — gib mir etwas das läuft"]
     },
     {
-      "text": "Dein idealer Agent ist...",
-      "choices": ["Proaktiv — er erkennt Probleme und schlägt nächste Schritte vor", "Reaktiv — er beantwortet, was ich frage, ohne abzuweichen"]
+      "text": "Während einer tiefen Coding-Session ist dein idealer Agent...",
+      "choices": ["Proaktiv: er beobachtet und warnt vor potenziellen Risiken bevor du fragst", "Bereitschaftsmodus: wartet bis ich frage, antwortet dann präzise ohne meinen Flow zu unterbrechen"]
     },
     {
-      "text": "Den Kommunikationsstil deines Agenten bevorzugst du...",
-      "choices": ["Professionell und strukturiert — klar, effizient, kein Fülltext", "Gesprächig und freundlich — wie ein kluger Kollege"]
+      "text": "Du bevorzugst, dass die Ausgabe deines Agents so aussieht...",
+      "choices": ["Strukturiert: Bulletpoints, klare Überschriften, Code-Blöcke — leicht zu scannen und zu kopieren", "Gesprächig: wie ein Senior Dev der auf Slack erklärt — natürlich und leicht zu lesen"]
     },
     {
-      "text": "Wenn du bei einem schwierigen Problem feststeckst, möchtest du, dass dein Agent...",
-      "choices": ["Kreative oder unkonventionelle Ansätze vorschlägt", "Bewährten Methoden und systematischen Debugging-Schritten folgt"]
+      "text": "Du steckst seit 3 Stunden bei einem seltsamen, intermittierenden Production-Bug fest. Du willst, dass dein Agent...",
+      "choices": ["Unkonventionelle Hypothesen wirft — Race Conditions, Memory Leaks, Winkel die du nicht bedacht hast", "Systematisch vorgeht: Logs, Stack Trace, bekannte Fehlermuster, Schritt für Schritt"]
     }
   ],
   "mbti_names": {
