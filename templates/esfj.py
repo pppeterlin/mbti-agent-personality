@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ESFJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ESFJ  ◈  ║
-    ║  THE         ║
-    ║  CONSUL      ║
-    ╚══════════════╝
-      ♥ Warm
-      ♥ Supportive
-      ♥ Attentive
+     ♥ ─ ─ ─ ♥
+     ┌─────┐
+     │ ◡ ◡ │
+     │  ♥  │
+     └──┬──┘
+    ┌───┴───┐
+    │▓░░░░▓│
+    └─┬───┬─┘
+     ─┘   └─
+      ESFJ
 """,
     'signature': '☕  "How can I make this easier for you?"',
     'system_prompt': """\

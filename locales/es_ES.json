@@ -27,44 +27,44 @@
   "done_message": "Tu agente IA ahora es {type} ({name}).",
   "questions": [
     {
-      "text": "Después de un día largo y agotador, ¿cómo te recuperas?",
-      "choices": ["Tiempo solo: leer, jugar o simplemente estar en calma", "Hablar con un amigo o socializar"]
+      "text": "Viernes por la tarde — Production tuvo tres bugs en cascada, y finalmente los arreglaste al atardecer. ¿Cómo cierras el día?",
+      "choices": ["Cierro todas las notificaciones de Slack, auriculares puestos, y me pongo solo con un side project o artículos técnicos", "Busco a alguien del equipo para una retro rápida, o salimos a tomar algo para desconectar"]
     },
     {
-      "text": "Al comenzar un nuevo proyecto, tu primer instinto es...",
-      "choices": ["Pensar en el panorama general y la visión a largo plazo", "Mapear los pasos concretos y los requisitos inmediatos"]
+      "text": "Tu PM te manda una nueva feature request con tres líneas de contexto. ¿Cuál es tu primer movimiento?",
+      "choices": ["Empezar a pensar en la arquitectura del sistema, cómo encaja en el roadmap y la escalabilidad futura", "Disparar una lista de preguntas: edge cases, criterios de aceptación, qué necesita el esquema de BD"]
     },
     {
-      "text": "Un amigo te pide consejo sobre una decisión difícil. Tú...",
-      "choices": ["Analizas la situación lógicamente y das el camino más racional", "Primero te aseguras de que se sienta escuchado, luego das tu perspectiva"]
+      "text": "Un junior hace un PR que es fundamentalmente incorrecto — no es estilo, es la arquitectura. Tú...",
+      "choices": ["Dejas comentarios de review precisos: \"Esto causará el problema X. El enfoque correcto es Y.\"", "Propones una sesión de pairing de 15 min, entiendes su razonamiento primero, luego buscáis juntos la solución"]
     },
     {
-      "text": "Tu día de trabajo ideal es...",
-      "choices": ["Planificado: agenda clara, bloques programados, estructura predecible", "Flexible: me adapto según las prioridades del día"]
+      "text": "Mañana hay Sprint Planning. Esta noche...",
+      "choices": ["Reviso todos los tickets, estimo la complejidad, preparo notas — entro preparado", "Me presento y lo pienso en tiempo real — prepararme demasiado es perder el tiempo"]
     },
     {
-      "text": "En una lluvia de ideas grupal, tiendes a...",
-      "choices": ["Pensar en voz alta — las ideas cobran vida en la conversación", "Observar primero, luego compartir tu idea más desarrollada"]
+      "text": "El equipo debate Monolith vs. Microservices y la cosa se calienta. Tú tiendes a...",
+      "choices": ["Entrar pronto, pensar en voz alta y afinar tu opinión a través del intercambio", "Escuchar a todos primero, y luego dar una opinión bien formada cuando estés listo"]
     },
     {
-      "text": "Cuando tu agente detecta un error tuyo, prefieres que...",
-      "choices": ["Te lo diga directamente: qué está mal, por qué y cómo corregirlo", "Lo enmarque de forma constructiva: reconoce tu intención y luego te guía"]
+      "text": "Tu agente detecta un bug en tu código. ¿Cómo quieres que responda?",
+      "choices": ["Al grano: archivo, línea, causa raíz, solución — sin preámbulos", "Que explique por qué es un bug para entenderlo de verdad, no solo parchearlo"]
     },
     {
-      "text": "Durante una sesión de código, quieres que tu agente se enfoque en...",
-      "choices": ["La arquitectura, patrones y las implicaciones de diseño a largo plazo", "Los detalles exactos de implementación, casos límite y corrección"]
+      "text": "Estás diseñando un nuevo servicio desde cero. ¿Qué modo de agente te resulta más útil?",
+      "choices": ["\"Aquí hay varias opciones de arquitectura con sus trade-offs\" — dame la visión general", "\"Aquí el código que funciona para exactamente lo que necesitas\" — dame algo que corra"]
     },
     {
-      "text": "Tu agente ideal es...",
-      "choices": ["Proactivo — detecta problemas y sugiere próximos pasos sin pedírselo", "Reactivo — responde lo que pregunto sin salirse del guión"]
+      "text": "Durante una sesión de código profunda, tu agente ideal es...",
+      "choices": ["Proactivo: observa y avisa de riesgos potenciales antes de que lo preguntes", "En espera: callado hasta que pregunto, luego responde con precisión sin interrumpir mi flujo"]
     },
     {
-      "text": "El estilo de comunicación que prefieres de tu agente...",
-      "choices": ["Profesional y estructurado — claro, eficiente, sin relleno", "Conversacional y amigable — como un colega inteligente"]
+      "text": "Prefieres que la salida de tu agente sea...",
+      "choices": ["Estructurada: bullets, encabezados claros, bloques de código — fácil de escanear y copiar", "Conversacional: como un senior dev explicando en Slack — natural y fácil de leer"]
     },
     {
-      "text": "Cuando estás atascado en un problema difícil, quieres que tu agente...",
-      "choices": ["Proponga ángulos creativos o no convencionales que no has considerado", "Siga metodologías probadas y pasos sistemáticos de depuración"]
+      "text": "Llevas 3 horas bloqueado con un bug intermitente raro en Production. Quieres que tu agente...",
+      "choices": ["Lance hipótesis no convencionales — race conditions, memory leaks, ángulos que no has considerado", "Vaya sistemáticamente: logs, stack trace, modos de fallo conocidos, paso a paso"]
     }
   ],
   "mbti_names": {

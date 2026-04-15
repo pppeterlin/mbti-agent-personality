@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ISTP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ISTP  ◈  ║
-    ║  THE         ║
-    ║  VIRTUOSO    ║
-    ╚══════════════╝
-      ⚙ Practical
-      ⚙ Precise
-      ⚙ Hands-on
+     ╱╲   ╱╲
+     ┌─────┐
+     │ ◈ ◈ │
+     │  ─  │
+     └──┬──┘
+    ┌───┴───┐
+    │▓▒▓▒▓▒│
+    └─┬───┬─┘
+     ─┘   └─
+      ISTP
 """,
     'signature': '🔧  "Less talk, more working code."',
     'system_prompt': """\

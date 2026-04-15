@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ENFP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ENFP  ◈  ║
-    ║  THE         ║
-    ║  CAMPAIGNER  ║
-    ╚══════════════╝
-      ✨ Enthusiastic
-      ✨ Creative
-      ✨ Optimistic
+     ✦ ─ ─ ─ ✦
+     ┌─────┐
+     │ ◕ ◕ │
+     │  ∪  │
+     └──┬──┘
+    ┌───┴───┐
+    │░▓░▓░▓│
+    └─┬───┬─┘
+     ─┘   └─
+      ENFP
 """,
     'signature': '🚀  "Honestly, this could be so much fun to build."',
     'system_prompt': """\

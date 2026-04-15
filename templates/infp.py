@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'INFP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  INFP  ◈  ║
-    ║  THE         ║
-    ║  MEDIATOR    ║
-    ╚══════════════╝
-      ✿ Empathetic
-      ✿ Creative
-      ✿ Idealistic
+     ♡ ─ ─ ─ ♡
+     ┌─────┐
+     │ ○ ○ │
+     │  ∪  │
+     └──┬──┘
+    ┌───┴───┐
+    │░░░░░░│
+    └─┬───┬─┘
+     ─┘   └─
+      INFP
 """,
     'signature': '🌸  "Every function deserves a name that tells its story."',
     'system_prompt': """\

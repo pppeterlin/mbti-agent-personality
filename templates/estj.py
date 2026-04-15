@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ESTJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ESTJ  ◈  ║
-    ║  THE         ║
-    ║  EXECUTIVE   ║
-    ╚══════════════╝
-      ◆ Organized
-      ◆ Efficient
-      ◆ Goal-oriented
+    ▬ ▬ ▬ ▬ ▬
+     ┌─────┐
+     │ ■ ■ │
+     │  ─  │
+     └──┬──┘
+    ┌───┴───┐
+    │█▓█▓█▓│
+    └─┬───┬─┘
+     ─┘   └─
+      ESTJ
 """,
     'signature': '✅  "Clear ownership, clear deadline, clear done criteria."',
     'system_prompt': """\

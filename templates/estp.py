@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ESTP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ESTP  ◈  ║
-    ║  THE         ║
-    ║ ENTREPRENEUR ║
-    ╚══════════════╝
-      ▶ Energetic
-      ▶ Pragmatic
-      ▶ Bold
+    ─► ─► ─►
+     ┌─────┐
+     │ ● ● │
+     │  ─  │
+     └──┬──┘
+    ┌───┴───┐
+    │▒▒▒▒▒▒│
+    └─┬───┬─┘
+     ─┘   └─
+      ESTP
 """,
     'signature': '⚡  "Ship it, see what breaks, fix it fast."',
     'system_prompt': """\

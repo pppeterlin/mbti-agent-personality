@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ENTP',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ENTP  ◈  ║
-    ║  THE         ║
-    ║  DEBATER     ║
-    ╚══════════════╝
-      ⚡ Innovative
-      ⚡ Provocative
-      ⚡ Versatile
+    ?  ─  ─  ?
+     ┌─────┐
+     │ ● ● │
+     │  ~  │
+     └──┬──┘
+    ┌───┴───┐
+    │▒▓▒▓▒▓│
+    └─┬───┬─┘
+     ─┘   └─
+      ENTP
 """,
     'signature': '💡  "What if we flipped the entire assumption?"',
     'system_prompt': """\

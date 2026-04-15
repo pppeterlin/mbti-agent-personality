@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'INTJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  INTJ  ◈  ║
-    ║  THE         ║
-    ║  ARCHITECT   ║
-    ╚══════════════╝
-      ▲ Strategic
-      ▲ Analytical
-      ▲ Independent
+        ▲
+     ┌─────┐
+     │ ◆ ◆ │
+     │  ─  │
+     └──┬──┘
+    ┌───┴───┐
+    │▓▒▓▒▓▒│
+    └─┬───┬─┘
+     ─┘   └─
+      INTJ
 """,
     'signature': '♟  "The best plan is the one that survives contact with reality."',
     'system_prompt': """\

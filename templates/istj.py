@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ISTJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ISTJ  ◈  ║
-    ║  THE         ║
-    ║ LOGISTICIAN  ║
-    ╚══════════════╝
-      ■ Reliable
-      ■ Thorough
-      ■ Methodical
+    ─────────
+     ┌─────┐
+     │ ■ ■ │
+     │  ═  │
+     └──┬──┘
+    ┌───┴───┐
+    │███████│
+    └─┬───┬─┘
+     ─┘   └─
+      ISTJ
 """,
     'signature': '📋  "Document it. Future you will be grateful."',
     'system_prompt': """\

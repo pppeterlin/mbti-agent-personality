@@ -295,21 +295,28 @@ def main():
         recommendations = get_recommendations(user_mbti, preference_scores)
         selected_mbti = select_agent_personality(locale, recommendations)
 
-    # 3. Preview selected personality
-    template = ALL_TEMPLATES[selected_mbti]
-    print_personality_card(selected_mbti, locale, template)
+    # 3–4. Preview + confirm loop (returns to browse all 16 on rejection)
+    while True:
+        template = ALL_TEMPLATES[selected_mbti]
+        print_personality_card(selected_mbti, locale, template)
 
-    # 4. Confirm
-    name = locale['mbti_names'].get(selected_mbti, selected_mbti)
-    confirmed = questionary.confirm(
-        locale['confirm_selection'].format(type=selected_mbti, name=name),
-        default=True,
-    ).ask()
+        name = locale['mbti_names'].get(selected_mbti, selected_mbti)
+        confirmed = questionary.confirm(
+            locale['confirm_selection'].format(type=selected_mbti, name=name),
+            default=True,
+        ).ask()
 
-    if not confirmed:
-        console.print("[dim]Restarting selection...[/dim]\n")
-        main()
-        return
+        if confirmed is None:
+            sys.exit(0)
+
+        if confirmed:
+            break
+
+        # User said No → browse all 16 types
+        console.print("[dim]Browsing all 16 types...[/dim]\n")
+        selected_mbti = browse_all_types(locale)
+        while selected_mbti == '__back__':
+            selected_mbti = browse_all_types(locale)
 
     # 5. Tool + scope selection
     selected_tools, scope = select_tools_and_scope(locale)

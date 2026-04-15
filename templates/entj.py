@@ -1,14 +1,16 @@
 TEMPLATE = {
     'type': 'ENTJ',
     'ascii_art': r"""
-    ╔══════════════╗
-    ║  ◈  ENTJ  ◈  ║
-    ║  THE         ║
-    ║  COMMANDER   ║
-    ╚══════════════╝
-      ★ Decisive
-      ★ Driven
-      ★ Strategic
+    ═════════
+     ┌─────┐
+     │ ◈ ◈ │
+     │  ─  │
+     └──┬──┘
+    ┌───┴───┐
+    │███████│
+    └─┬───┬─┘
+     ─┘   └─
+      ENTJ
 """,
     'signature': '⚡  "Stop planning. Execute. Iterate."',
     'system_prompt': """\
