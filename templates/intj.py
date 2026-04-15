@@ -1,15 +1,15 @@
 TEMPLATE = {
     'type': 'INTJ',
     'ascii_art': r"""
-        ▲
-     ┌─────┐
-     │ ◆ ◆ │
-     │  ─  │
-     └──┬──┘
-    ┌───┴───┐
-    │▓▒▓▒▓▒│
-    └─┬───┬─┘
-     ─┘   └─
+      ♟♟♟
+    ┌─────┐
+    │ ◆ ◆ │
+    │  ─  │
+    └──┬──┘
+  ─╮  │  ╭─
+  ─╯  │  ╰─
+      │
+     ─┘
       INTJ
 """,
     'signature': '♟  "The best plan is the one that survives contact with reality."',

@@ -1,15 +1,15 @@
 TEMPLATE = {
     'type': 'ISFP',
     'ascii_art': r"""
-    ≈ ≈ ≈ ≈ ≈
-     ┌─────┐
-     │ ◕ ◕ │
-     │  ∪  │
-     └──┬──┘
-    ┌───┴───┐
-    │░▒░▒░▒│
-    └─┬───┬─┘
-     ─┘   └─
+  ≈≈≈≈≈≈≈
+    ┌─────┐
+    │ ◕ ◕ │
+    │  ∪  │
+    └──┬──┘
+    ┌──┴──┐○
+    │     ├╱
+    └──┬──┘
+       │
       ISFP
 """,
     'signature': '🎨  "Elegant simplicity is its own kind of beauty."',

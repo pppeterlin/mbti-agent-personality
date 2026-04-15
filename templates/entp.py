@@ -1,15 +1,14 @@
 TEMPLATE = {
     'type': 'ENTP',
     'ascii_art': r"""
-    ?  ─  ─  ?
-     ┌─────┐
-     │ ● ● │
-     │  ~  │
-     └──┬──┘
-    ┌───┴───┐
-    │▒▓▒▓▒▓│
-    └─┬───┬─┘
-     ─┘   └─
+    ?  ─  ?
+    ┌─────┐
+    │ ● ● │
+    │  ~  │
+    └──┬──┘
+    ┌──┴──┐
+    │     │
+  ══╧═════╧══
       ENTP
 """,
     'signature': '💡  "What if we flipped the entire assumption?"',

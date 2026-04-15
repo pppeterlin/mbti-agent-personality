@@ -1,15 +1,14 @@
 TEMPLATE = {
     'type': 'ESFP',
     'ascii_art': r"""
-     ✶ ─ ─ ─ ✶
-     ┌─────┐
-     │ ◕ ◕ │
-     │  ‿  │
-     └──┬──┘
-    ┌───┴───┐
-    │▒░▒░▒░│
-    └─┬───┬─┘
-     ─┘   └─
+  ✶─────✶
+    ┌─────┐
+    │ ◕ ◕ │
+    │  ‿  │
+    └──┬──┘
+  ♩─┌──┴──┐─♪
+    └──┬──┘
+       │
       ESFP
 """,
     'signature': '🎉  "This is actually really fun to build, let\'s go!"',

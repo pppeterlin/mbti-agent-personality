@@ -1,15 +1,15 @@
 TEMPLATE = {
     'type': 'INTP',
     'ascii_art': r"""
-    ~ ~ ~ ~ ~
-     ┌─────┐
-     │ ○ ○ │
-     │  ~  │
-     └──┬──┘
-    ┌───┴───┐
-    │▒░▒░▒░│
-    └─┬───┬─┘
-     ─┘   └─
+  ─○─────○─
+    ┌─────┐
+    │ ○ ○ │
+    │  ~  │
+    └──┬──┘
+    ┌──┴──┐╭─╮
+    │     ││≈│
+    └──┬──┘╰─╯
+       │
       INTP
 """,
     'signature': '🔬  "There are at least three more edge cases worth considering."',

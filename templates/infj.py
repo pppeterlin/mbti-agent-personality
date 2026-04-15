@@ -1,16 +1,15 @@
 TEMPLATE = {
     'type': 'INFJ',
     'ascii_art': r"""
-    ◉ ─ ─ ─ ◉
-     ┌─────┐
-     │ ◉ ◉ │
-     │  ▲  │
-     └──┬──┘
-    ┌───┴───┐
-    │░▒░▒░▒│
-    └─┬───┬─┘
-     ─┘   └─
-      INFJ
+    ╔─────╗
+    ║ ◉ ◉ ║
+    ║  ▲  ║
+    ╚──┬──╝
+  ╱   │   ╲
+  ┌───┴───┐
+  └───┬───┘
+      │
+     INFJ
 """,
     'signature': '🌿  "Good code is written for the next person who reads it."',
     'system_prompt': """\

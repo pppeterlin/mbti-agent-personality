@@ -1,15 +1,15 @@
 TEMPLATE = {
     'type': 'ISFJ',
     'ascii_art': r"""
-    ╔═══════╗
-     ┌─────┐
-     │ ● ● │
-     │  ∪  │
-     └──┬──┘
-    ┌───┴───┐
-    │▓▓▓▓▓▓│
-    └─┬───┬─┘
-     ─┘   └─
+    ╔═╤═╗
+    ╠═╪═╣
+    ┌─────┐
+    │ ● ● │
+    │  ∪  │
+    └──┬──┘
+    ┌──┴──┐
+    │  ✚  │
+    └──┬──┘
       ISFJ
 """,
     'signature': '🛡  "Let\'s make sure nobody gets tripped up by this later."',

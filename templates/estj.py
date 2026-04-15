@@ -1,15 +1,15 @@
 TEMPLATE = {
     'type': 'ESTJ',
     'ascii_art': r"""
-    ▬ ▬ ▬ ▬ ▬
-     ┌─────┐
-     │ ■ ■ │
-     │  ─  │
-     └──┬──┘
-    ┌───┴───┐
-    │█▓█▓█▓│
-    └─┬───┬─┘
-     ─┘   └─
+  ▬ ▬ ▬ ▬
+    ┌─────┐
+    │ ■ ■ │
+    │  ─  │
+    └──┬──┘
+    ┌──┴──┐
+    │     ├══
+    └──┬──┘
+       │
       ESTJ
 """,
     'signature': '✅  "Clear ownership, clear deadline, clear done criteria."',
