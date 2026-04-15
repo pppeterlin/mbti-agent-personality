@@ -260,46 +260,46 @@ def main():
     console.clear()
     print_welcome(locale)
 
-    # 2. Determine user MBTI and get recommendations
-    user_mbti = get_user_mbti(locale)
+    # 2. Initial menu → determine mode
     preference_scores = {}
+    recommendations = []
 
-    if user_mbti is None:
-        # Quiz path
+    user_choice = get_user_mbti(locale)
+    if user_choice is None:
         user_mbti, preference_scores = run_full_quiz(locale)
         console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
         recommendations = get_recommendations(user_mbti, preference_scores)
-        selected_mbti = select_agent_personality(locale, recommendations)
+    elif user_choice != 'BROWSE':
+        recommendations = get_recommendations(user_choice, preference_scores)
+    # 'BROWSE' → recommendations stays [], pure browse mode
 
-    elif user_mbti == 'BROWSE':
-        # Browse all types — loop until user picks one (not back)
-        while True:
-            selected_mbti = browse_all_types(locale)
-            if selected_mbti != '__back__':
-                break
-            # Back from browse → re-ask user MBTI entry
-            user_mbti = get_user_mbti(locale)
-            if user_mbti is None:
-                user_mbti, preference_scores = run_full_quiz(locale)
-                console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
-                recommendations = get_recommendations(user_mbti, preference_scores)
-                selected_mbti = select_agent_personality(locale, recommendations)
-                break
-            elif user_mbti != 'BROWSE':
-                recommendations = get_recommendations(user_mbti, preference_scores)
-                selected_mbti = select_agent_personality(locale, recommendations)
-                break
-
-    else:
-        # Known MBTI — show compatible recommendations
-        recommendations = get_recommendations(user_mbti, preference_scores)
-        selected_mbti = select_agent_personality(locale, recommendations)
-
-    # 3–4. Preview + confirm loop (returns to browse all 16 on rejection)
+    # 3. Personality selection + preview + confirmation loop
+    selected_mbti = None
     while True:
+        # 3a. Pick a personality
+        if recommendations:
+            # select_agent_personality handles browse→Back→recommendations internally
+            selected_mbti = select_agent_personality(locale, recommendations)
+        else:
+            # Pure browse mode
+            selected_mbti = browse_all_types(locale)
+            if selected_mbti == '__back__':
+                # Back from browse → return to initial menu
+                user_choice = get_user_mbti(locale)
+                if user_choice is None:
+                    user_mbti, preference_scores = run_full_quiz(locale)
+                    console.print(f"\n[bold cyan]{locale['your_mbti_result'].format(type=user_mbti)}[/bold cyan]\n")
+                    recommendations = get_recommendations(user_mbti, preference_scores)
+                elif user_choice != 'BROWSE':
+                    recommendations = get_recommendations(user_choice, preference_scores)
+                # if 'BROWSE' again → stay in browse mode (recommendations stays [])
+                continue
+
+        # 3b. Preview selected personality
         template = ALL_TEMPLATES[selected_mbti]
         print_personality_card(selected_mbti, locale, template)
 
+        # 3c. Confirm
         name = locale['mbti_names'].get(selected_mbti, selected_mbti)
         confirmed = questionary.confirm(
             locale['confirm_selection'].format(type=selected_mbti, name=name),
@@ -311,14 +311,10 @@ def main():
 
         if confirmed:
             break
+        # No → loop back: recommendations mode shows list again,
+        #                  browse mode shows browse again (with Back → initial menu)
 
-        # User said No → browse all 16 types
-        console.print("[dim]Browsing all 16 types...[/dim]\n")
-        selected_mbti = browse_all_types(locale)
-        while selected_mbti == '__back__':
-            selected_mbti = browse_all_types(locale)
-
-    # 5. Tool + scope selection
+    # 4. Tool + scope selection
     selected_tools, scope = select_tools_and_scope(locale)
 
     # 6. Apply
